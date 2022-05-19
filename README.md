@@ -41,7 +41,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :orders
-
+- has_many :items
 
 ## Itemsテーブル
 
