@@ -38,13 +38,9 @@ Things you may want to cover:
 | last_name_ja        | string     | null: false                    |
 | first_name_ja       | string     | null: false                    |
 | birthday            | date       | null: false                    |
-| item                | references | null: false, foreign_key: true |
-| address             | references | null: false, foreign_key: true |
 
 ### Association
-- has_many :items
 - has_many :orders
-- has_one :address
 
 
 ## Itemsテーブル
@@ -56,21 +52,14 @@ Things you may want to cover:
 | category_id | integer    | null: false                    |
 | status_id   | integer    | null: false                    |
 | shipfee_id  | integer    | null: false                    |
-| local_id    | integer    | null: false                    |
+| province_id | integer    | null: false                    |
 | date_id     | integer    | null: false                    |
 | price       | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |
-| order       | references | null: false, foreign_key: true |
-| address     | references | null: false, foreign_key: true |
-
-
 
 ### Association
 - has_one :order
 - belongs_to :user
-- has_one :address
-
-
 
 ## Odersテーブル
 
@@ -78,11 +67,10 @@ Things you may want to cover:
 | ---------- | ---------- | ------------------------------ |
 | user       | references | null: false, foreign_key: true |
 | item       | references | null: false, foreign_key: true |
-| address    | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :item
-- belongs_to :users
+- belongs_to :user
 - has_one :address
 
 ## Addresses
@@ -90,16 +78,12 @@ Things you may want to cover:
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | posta_lcode | string     | null: false                    |
-| province    | integer    | null: false                    |
+| province_id | integer    | null: false                    |
 | city        | string     | null: false                    |
 | address1    | string     | null: false                    |
 | address2    | string     |                                |
 | phone       | string     | null: false                    |
 | order       | references | null: false, foreign_key: true |
-| user        | references | null: false, foreign_key: true |
-| item        | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :order
-- belongs_to :user
-- belongs_to :item
