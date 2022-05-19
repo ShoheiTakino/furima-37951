@@ -26,60 +26,80 @@ Things you may want to cover:
 
 
 
-## usersテーブル
+## Usersテーブル
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| password           | string | null: false               |
-| encrypted_password | string | null: false               |
-| lastname           | string | null: false               |
-| firstname          | string | null: false               |
-| lastname_ja        | string | null: false               |
-| firstname_ja       | string | null: false               |
-| birthday           | string | null: false               |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| nickname            | string     | null: false                    |
+| email               | string     | null: false, unique: true      |
+| encrypted_password  | string     | null: false                    |
+| last_name           | string     | null: false                    |
+| first_name          | string     | null: false                    |
+| last_name_ja        | string     | null: false                    |
+| first_name_ja       | string     | null: false                    |
+| birthday            | date       | null: false                    |
+| item                | references | null: false, foreign_key: true |
+| address             | references | null: false, foreign_key: true |
 
 ### Association
 - has_many :items
-- has_one :buyer
+- has_many :orders
+- has_one :address
 
 
-## itemsテーブル
+## Itemsテーブル
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| image    | string     | null: false                    |
-| item     | text       | null: false                    |
-| content  | text       | null: false                    |
-| category | string     | null: false                    |
-| status   | string     | null: false                    |
-| shipfee  | string     | null: false                    |
-| local    | string     | null: false                    |
-| date     | string     | null: false                    |
-| price    | string     | null: false                    |
-| user     | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| name        | string     | null: false                    |
+| content     | text       | null: false                    |
+| category_id | integer    | null: false                    |
+| status_id   | integer    | null: false                    |
+| shipfee_id  | integer    | null: false                    |
+| local_id    | integer    | null: false                    |
+| date_id     | integer    | null: false                    |
+| price       | integer    | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| order       | references | null: false, foreign_key: true |
+| address     | references | null: false, foreign_key: true |
+
 
 
 ### Association
-- has_one :buyer
+- has_one :order
 - belongs_to :user
+- has_one :address
 
 
 
-## buyerテーブル
+## Odersテーブル
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
-| postalcode | string     | null: false                    |
-| province   | string     | null: false                    |
-| city       | string     | null: false                    |
-| address1   | string     | null: false                    |
-| address2   | string     |                                |
-| phone      | string     | null: false                    |
 | user       | references | null: false, foreign_key: true |
 | item       | references | null: false, foreign_key: true |
+| address    | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :item
 - belongs_to :users
+- has_one :address
+
+## Addresses
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| posta_lcode | string     | null: false                    |
+| province    | integer    | null: false                    |
+| city        | string     | null: false                    |
+| address1    | string     | null: false                    |
+| address2    | string     |                                |
+| phone       | string     | null: false                    |
+| order       | references | null: false, foreign_key: true |
+| user        | references | null: false, foreign_key: true |
+| item        | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :order
+- belongs_to :user
+- belongs_to :item
