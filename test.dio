@@ -1,0 +1,65 @@
+<mxfile host="65bd71144e">
+    <diagram id="sRJumiYJHYwXCm755tta" name="ページ1">
+        <mxGraphModel dx="501" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Users" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="30" width="270" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;nickname&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;email&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;password&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;encrypted_password&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;lastname&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;firstname&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;lastname-ja&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;firstname-ja&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font size=&quot;3&quot;&gt;birthday&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="2">
+                    <mxGeometry y="15" width="240" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Items" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="30" width="290" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;ul style=&quot;font-size: 18px&quot;&gt;&lt;li&gt;image&lt;/li&gt;&lt;li&gt;item&lt;/li&gt;&lt;li&gt;content&lt;/li&gt;&lt;li&gt;category&lt;/li&gt;&lt;li&gt;status&lt;/li&gt;&lt;li&gt;shipfee&lt;/li&gt;&lt;li&gt;local&lt;/li&gt;&lt;li&gt;date&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;li&gt;user&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="5">
+                    <mxGeometry x="10" y="15" width="240" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Buyer(仮)" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="410" width="300" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;ul style=&quot;font-size: 18px&quot;&gt;&lt;li&gt;postalcode&lt;/li&gt;&lt;li&gt;province&lt;/li&gt;&lt;li&gt;city&lt;/li&gt;&lt;li&gt;address1&lt;/li&gt;&lt;li&gt;address2&lt;/li&gt;&lt;li&gt;phone&lt;/li&gt;&lt;li&gt;user&lt;/li&gt;&lt;li&gt;item&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="6">
+                    <mxGeometry x="20" y="10" width="240" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="line;strokeWidth=2;html=1;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="150" width="160" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;fontSize=18;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="135" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;fontSize=18;rotation=45;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="160" width="30" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;fontSize=18;rotation=-45;" vertex="1" parent="1">
+                    <mxGeometry x="445" y="140" width="30" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;fontSize=18;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="600" y="290" as="targetPoint"/>
+                        <mxPoint x="600" y="290" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="shape=filledEdge;rounded=0;fixDash=1;endArrow=none;strokeWidth=10;fillColor=#ffffff;edgeStyle=orthogonalEdgeStyle;fontSize=18;jumpSize=1;" edge="1" parent="1">
+                    <mxGeometry width="60" height="40" relative="1" as="geometry">
+                        <mxPoint x="230" y="540" as="sourcePoint"/>
+                        <mxPoint x="120" y="300" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="540"/>
+                            <mxPoint x="120" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="shape=filledEdge;rounded=0;fixDash=1;endArrow=none;strokeWidth=10;fillColor=#ffffff;edgeStyle=orthogonalEdgeStyle;fontSize=18;jumpSize=1;" edge="1" parent="1">
+                    <mxGeometry width="60" height="40" relative="1" as="geometry">
+                        <mxPoint x="530" y="580" as="sourcePoint"/>
+                        <mxPoint x="650" y="340" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="650" y="580"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
