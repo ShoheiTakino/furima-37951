@@ -12,7 +12,7 @@ class Item < ApplicationRecord
   validates :status_id,   presence: true, numericality: { other_than: 1, message: "can't be blank" } 
   validates :shipfee_id,  presence: true, numericality: { other_than: 1, message: "can't be blank" } 
   validates :province_id, presence: true, numericality: { other_than: 1, message: "can't be blank" } 
-  validates :date_id,     presence: true, numericality: { other_than: 1, message: "can't be blank" } 
+  validates :shipping_id, presence: true, numericality: { other_than: 1, message: "can't be blank" } 
   validates :price,       presence: true
   validates :image,       presence: true
 
