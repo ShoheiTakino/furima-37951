@@ -2,9 +2,9 @@ FactoryBot.define do
   factory :item do
 
     association :user
-    
+
     name                 {Faker::Name.name}
-    content              {Faker::Lorem.sentence}
+    content              {2}
     category_id          {2} 
     status_id            {2}
     shipfee_id           {2}
