@@ -45,17 +45,17 @@ Things you may want to cover:
 
 ## Itemsテーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| name        | string     | null: false                    |
-| content     | text       | null: false                    |
-| category_id | integer    | null: false                    |
-| status_id   | integer    | null: false                    |
-| shipfee_id  | integer    | null: false                    |
-| province_id | integer    | null: false                    |
-| date_id     | integer    | null: false                    |
-| price       | integer    | null: false                    |
-| user        | references | null: false, foreign_key: true |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| name         | string     | null: false                    |
+| content      | text       | null: false                    |
+| category_id  | integer    | null: false                    |
+| status_id    | integer    | null: false                    |
+| shipfee_id   | integer    | null: false                    |
+| province_id  | integer    | null: false                    |
+| ship_day_id  | integer    | null: false                    |
+| price        | integer    | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 - has_one :order
