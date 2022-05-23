@@ -126,19 +126,19 @@
       新規投稿商品
     </div>
     <ul class='item-lists'>
-
-      <%# if @items %>
-      <% if @items.each do |item| %>
-      <li class='list'>
+     <% if @items.present? %>
+      <% @items.each do |item| %>
+         <li class='list'>
           <%= link_to "#"  do %>
             <div class='item-img-content'>
               <%= image_tag item.image, class: "item-img" %>
 
-          <% unless @items %>
-          <div class='sold-out'>
+          <%# 商品が売れていればsold outを表示しましょう %>
+          <%# unless @items %>
+          <%#<div class='sold-out'>
             <span>Sold Out!!</span>
           </div>
-          <% end %>
+          <%# end %>
 
         </div>
         <div class='item-info'>
@@ -172,10 +172,10 @@
               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
             </div>
-          </div>
-        </div>
-        <% end %>
-      </li>
+            </div>
+           </div>
+          <% end %>
+         </li>
       <% end %>
       <%# //商品がある場合は表示されないようにしましょう %>
       <%# //商品がない場合は以下のダミー商品が表示されるようにしましょう %>
