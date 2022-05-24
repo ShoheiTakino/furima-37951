@@ -8,11 +8,10 @@ class OrderAddress
   validates :province_id, presence: true, numericality: {other_than: 0, message: "can't be blank"}
   validates :city,        presence: true
   validates :address1,    presence: true
-  validates :address2
   validates :phone,       presence: true
-  validates :order_id
-  validates :user_id
-  validates :item_id
+  validates :order_id,    presence: true
+  validates :user_id,     presence: true
+  validates :item_id,     presence: true
 
   def save
     order = Order.create(user_id: user_id, item_id: item_id)

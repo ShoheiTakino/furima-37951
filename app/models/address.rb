@@ -6,7 +6,6 @@ class Address < ApplicationRecord
   validates :province_id,   numericality: {other_than: 0, message: "can't be blank"}
   validates :city,          presence: true
   validates :address1,      presence: true
-  validates :address2,
   validates :phone,         presence: true
 
 end
