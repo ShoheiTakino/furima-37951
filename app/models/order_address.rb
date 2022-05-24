@@ -14,4 +14,7 @@ class OrderAddress
   validates :user_id
   validates :item_id
 
+  def save
+  end
+
 end
