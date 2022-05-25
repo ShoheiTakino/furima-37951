@@ -4,11 +4,11 @@ class OrderAddress
 
 
   
-  validates :postal_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
-  validates :province_id, presence: true, numericality: {other_than: 0, message: "can't be blank"}
+  validates :postal_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid."}
+  validates :province_id, presence: true, numericality: {other_than: 1, message: "can't be blank"}
   validates :city,        presence: true
   validates :address1,    presence: true
-  validates :phone,       presence: true,         format: {with: /\A\d{10,11}\z/}
+  validates :phone,       format: {with: /\A\d{10,11}\z/, message: "is invalid."}
   validates :user_id,     presence: true
   validates :item_id,     presence: true
 
