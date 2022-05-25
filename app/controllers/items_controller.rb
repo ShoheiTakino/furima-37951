@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :new, :create, :show]
   before_action :set_item, only: [:show, :edit]
 
   def index
@@ -62,9 +62,11 @@ class ItemsController < ApplicationController
 
   def move_to_index
     redirect_to new_user_session_path unless user_signed_in?
-  end
-    @item = Item.find(params[:item_id])
+
+    @item = Item.find(params[:id])
   if @item.order.present?
     redirect_to root_path
   end
+  end
+   
 end
