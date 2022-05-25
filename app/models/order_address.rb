@@ -8,7 +8,7 @@ class OrderAddress
   validates :province_id, presence: true, numericality: {other_than: 0, message: "can't be blank"}
   validates :city,        presence: true
   validates :address1,    presence: true
-  validates :phone,       presence: true
+  validates :phone,       presence: true,         format: {with: /\A\d{10,11}\z/}
   validates :user_id,     presence: true
   validates :item_id,     presence: true
 
