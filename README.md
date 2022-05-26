@@ -61,7 +61,7 @@ Things you may want to cover:
 - has_one :order
 - belongs_to :user
 
-## Odersテーブル
+## Ordersテーブル
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
@@ -77,7 +77,7 @@ Things you may want to cover:
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| posta_lcode | string     | null: false                    |
+| postal_code | string     | null: false                    |
 | province_id | integer    | null: false                    |
 | city        | string     | null: false                    |
 | address1    | string     | null: false                    |
