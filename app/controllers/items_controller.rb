@@ -64,9 +64,6 @@ class ItemsController < ApplicationController
     redirect_to new_user_session_path unless user_signed_in?
 
     @item = Item.find(params[:id])
-  if @item.order.present?
-    redirect_to root_path
+    redirect_to root_path if @item.order.present?
   end
-  end
-   
 end
